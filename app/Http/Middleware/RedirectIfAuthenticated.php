@@ -25,3 +25,11 @@ class RedirectIfAuthenticated
         return $next($request);
     }
 }
+
+// protected function redirectAdmin () {
+//     if(auth()->user()->admin == 1){
+//         redirect('/cthorecaadmin');
+//     } else {
+//         return "kek";
+//     }
+// }
