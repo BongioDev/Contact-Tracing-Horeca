@@ -14,7 +14,7 @@
             <div style="margin-bottom:35px" class="list-group">
                 <a href="/cthorecaadmin" class="list-group-item list-group-item-action">Home</a>
                 <a href="/addClient" class="list-group-item list-group-item-action">Nieuwe klant aanmaken</a>
-                <a href="#" class="list-group-item list-group-item-action">Alle klanten ophalen</a>
+                <a href="/getClient" class="list-group-item list-group-item-action">Alle klanten ophalen</a>
             </div>
         </div>
         {{-- form --}}

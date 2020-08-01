@@ -27,3 +27,13 @@ Route::get('/cthorecaadmin', 'AdminController@index')->middleware('admin');
 Route::get('/addClient', 'AdminController@addClientView')->middleware('admin');
 
 Route::post('/addClient', 'AdminController@addClientPost')->middleware('admin');
+
+Route::get('/getClient', 'AdminController@getClientView')->middleware('admin');
+
+Route::post('/getClient', 'AdminController@getClientQuery')->middleware('admin');
+
+Route::get('/clientDetail/{client_id}', 'AdminController@getClientDetail')->middleware('admin');
+
+Route::get('/contacttracing/{client_id}', 'clientController@getClientForm')->middleware('admin');
+
+Route::get('/generateQRcode/{client_id}', 'clientController@generateQRcode')->middleware('admin');
