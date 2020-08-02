@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Visitor;
 
 class ClientController extends Controller
 {
@@ -29,20 +30,49 @@ class ClientController extends Controller
 
         // validate
         $this->validate($request, [
-            'surName' => 'required',
+            'firstName' => 'required',
             'lastName' => 'required',
-            'cateringName' => 'required',
-            'address' => 'required',
-            'logo' => 'image|nullable|max:2048',
             'telnr' => 'required',
             'email' => 'required',
-            'password' => 'required',
-            'paid' => 'required',
-            'abbo' => 'required',
-            'datePaid' => 'required',
-            'abbo' => 'required',
+            'tableNr' => 'required',
+            'stay' => 'nullable',
         ]);
+
+        $visitor = new Visitor;
+        $visitor->user_id = $client_id;
+        $visitor->firstName = $request->input('firstName');
+        $visitor->lastName = $request->input('lastName');
+        $visitor->email = $request->input('email');
+        $visitor->phoneNumber = $request->input('telnr');
+        $visitor->tableNumber = $request->input('tableNr');
+        $visitor->stayPeriod = $request->input('stay');
+        $visitor->save();
         
-        return view('clientDetail')->with('client', $client);
+        return back()->with('client', $client)->with('success', 'Formulier verstuurd, geniet van je bezoek!');
     }
+
+    public function clientDashboard(){
+
+        $client = User::where('id', auth()->user()->id)->first();
+
+        return view('clientDashboard')->with('client', $client);
+    }
+
+    public function getData(){
+
+        $client = User::where('id', auth()->user()->id)->first();
+
+        return view('getData')->with('client', $client);
+    }
+
+    public function postData(Request $request){
+
+        $datum = $request->input('datum');
+        $client = User::where('id', auth()->user()->id)->first();
+        $visitors = Visitor::where('user_id', auth()->user()->id)
+        ->where('created_at', 'LIKE', $datum . '%')->get();
+
+        return view('showdata')->with('client', $client)->with('visitors', $visitors);
+    }
+
 }

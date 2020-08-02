@@ -22,6 +22,7 @@ Route::get('/loginAdmin', function () {
     return view('auth.login');
 });
 
+//dashboard admin
 Route::get('/cthorecaadmin', 'AdminController@index')->middleware('admin');
 
 Route::get('/addClient', 'AdminController@addClientView')->middleware('admin');
@@ -34,9 +35,16 @@ Route::post('/getClient', 'AdminController@getClientQuery')->middleware('admin')
 
 Route::get('/clientDetail/{client_id}', 'AdminController@getClientDetail')->middleware('admin');
 
-//formulier
-Route::get('/contacttracing/{client_id}', 'clientController@getClientForm')->middleware('admin');
-
-Route::post('/contacttracing/{client_id}', 'clientController@postClientForm')->middleware('admin');
-
 Route::get('/generateQRcode/{client_id}', 'clientController@generateQRcode')->middleware('admin');
+
+//formulier
+Route::get('/contacttracing/{client_id}', 'clientController@getClientForm');
+
+Route::post('/contacttracing/{client_id}', 'clientController@postClientForm');
+
+//dashboard klant
+Route::get('/contacttracing/client/dashboard', 'clientController@clientDashboard')->middleware('auth');
+
+Route::get('/contacttracing/client/dashboard/getdata', 'clientController@getData')->middleware('auth');
+
+Route::post('/contacttracing/client/dashboard/getdata', 'clientController@postData')->middleware('auth');

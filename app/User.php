@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use GoldSpecDigital\LaravelEloquentUUID\Database\Eloquent\Uuid;
+use App\Visitor;
 
 class User extends Authenticatable
 {
@@ -16,6 +17,15 @@ class User extends Authenticatable
     protected $keyType = 'string';
     public $incrementing = false;
     protected $guarded = [];
+
+
+
+    public function visitor(){
+        return $this->hasMany('App\Visitor');
+    }
+
+
+
 
     /**
      * The attributes that are mass assignable.

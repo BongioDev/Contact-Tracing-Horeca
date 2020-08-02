@@ -13,9 +13,18 @@
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
 </head>
 <body>
-
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                @if (session('success'))
+                <div style="background:#111; padding: 50px" class="alert alert-success">
+                    <h2 style="text-align: center">{{session('success')}}</h2 style="text-align: center">
+                </div>
+                @endif
+            </div>
+        </div>
+    </div>
     <div class="main">
-
         <div class="container">
             <div class="booking-content">
                 <div class="booking-image">
@@ -47,6 +56,7 @@
                 <div class="booking-form">
                     <h1 id="catering">{{$client->cateringName}}</h1>
                     <form id="booking-form" method="post" action="">
+                        @csrf
                         <img id="logo" src="/storage/logos/{{$client->logo}}" alt="Booking Image">
                         <h2>Vul hieronder uw gegevens in</h2>
                         <p>(1 persoon per tafel)</p>
@@ -61,9 +71,6 @@
                         </div>
                         <div class="form-group form-input">
                             <input placeholder="E-mail adres*" type="email" name="email" value="" required />
-                        </div>
-                        <div class="form-group form-input">
-                            <input placeholder="Datum + uur bezoek*" type="datetime-local" name="visitDate" value="" required />
                         </div>
                         <div class="form-group form-input">
                             <input placeholder="Tafel nummer*" type="number" name="tableNr" value="" required />
