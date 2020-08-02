@@ -12,7 +12,7 @@
                 <a href="/contacttracing/client/dashboard/getdata" class="list-group-item list-group-item-action">Klanten ophalen</a>
                 <a href="/contacttracing/client/dashboard" class="list-group-item list-group-item-action">QR code</a>
                 <a href="/contacttracing/client/dashboard" class="list-group-item list-group-item-action">Logo uploaden</a>
-                <a href="/contacttracing/client/dashboard" class="list-group-item list-group-item-action">Help</a>
+                <a href="/contacttracing/client/dashboard/help" class="list-group-item list-group-item-action">Help</a>
               </div>
         </div>
         <div style="margin-top: 50px;" class="col-md-9">

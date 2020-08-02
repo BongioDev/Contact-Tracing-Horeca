@@ -16,16 +16,8 @@
               </div>
         </div>
         <div class="col-md-9">
-            <h4 style="margin-top: 50px;">Klanten ophalen</h4>
-            <br>
-            <form action="/contacttracing/client/dashboard/getdata" method="POST">
-                @csrf
-                Kies datum:
-                <input type="date" name="datum">
-                <br>
-                <br>
-                <input type="submit" value="Haal op" class="btn btn-outline-primary">
-            </form>
+            <h4 style="margin-top: 50px;">Hulp nodig?</h4>
+        <p>Contacteer ons op het nummer <a href="tel:+32488303222">+32488303222</a> of stuur een mailtje naar <a href="mailto:hello@hello.com?subject=Hulp contact tracing app." target="_blank">buh@contact.be</a> en we helpen u zo snel mogelijk verder!</p>
         </div>
     </div>
 </div>

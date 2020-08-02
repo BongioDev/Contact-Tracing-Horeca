@@ -72,7 +72,24 @@ class ClientController extends Controller
         $visitors = Visitor::where('user_id', auth()->user()->id)
         ->where('created_at', 'LIKE', $datum . '%')->get();
 
-        return view('showdata')->with('client', $client)->with('visitors', $visitors);
+        return view('showdata')->with('client', $client)->with('visitors', $visitors)->with('datum', $datum);
+    }
+
+    public function downloadData($datum){
+
+        $client = User::where('id', auth()->user()->id)->first();
+        $visitors = Visitor::where('user_id', auth()->user()->id)
+        ->where('created_at', 'LIKE', $datum . '%')->get();
+        $pdf = \PDF::loadView('layouts.pdf', compact('visitors', 'client', 'datum'));
+
+        return $pdf->download('bezoekers_'.$client->cateringName.'_'.$datum.'.pdf');
+    }
+
+    public function help(){
+
+        $client = User::where('id', auth()->user()->id)->first();
+
+      return view('help')->with('client', $client);
     }
 
 }

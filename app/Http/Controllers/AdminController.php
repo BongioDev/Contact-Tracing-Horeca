@@ -46,7 +46,7 @@ class AdminController extends Controller
             $logoToStore = $fileName.'_'.time().'_'.$extension;
             $uploadLogo = $request->file('logo')->storeAs('public/logos', $logoToStore);
         } else {
-            $logoToStore = 'noimage.jpg';
+            $logoToStore = 'noimage.png';
         }
 
         $user = new User;

@@ -48,3 +48,7 @@ Route::get('/contacttracing/client/dashboard', 'clientController@clientDashboard
 Route::get('/contacttracing/client/dashboard/getdata', 'clientController@getData')->middleware('auth');
 
 Route::post('/contacttracing/client/dashboard/getdata', 'clientController@postData')->middleware('auth');
+
+Route::get('/contacttracing/client/dashboard/getdata/download/{datum}', 'clientController@downloadData')->middleware('auth');
+
+Route::get('/contacttracing/client/dashboard/help', 'clientController@help')->middleware('auth');
