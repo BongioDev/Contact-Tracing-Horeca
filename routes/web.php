@@ -34,6 +34,9 @@ Route::post('/getClient', 'AdminController@getClientQuery')->middleware('admin')
 
 Route::get('/clientDetail/{client_id}', 'AdminController@getClientDetail')->middleware('admin');
 
+//formulier
 Route::get('/contacttracing/{client_id}', 'clientController@getClientForm')->middleware('admin');
+
+Route::post('/contacttracing/{client_id}', 'clientController@postClientForm')->middleware('admin');
 
 Route::get('/generateQRcode/{client_id}', 'clientController@generateQRcode')->middleware('admin');
