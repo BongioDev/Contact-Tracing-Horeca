@@ -17,20 +17,19 @@
               </div>
         </div>
         <div class="col-md-9">
-            <h4 style="margin-top: 50px;">Klanten ophalen</h4>
-            <p>Kies hieronder onder welke datum u de klanten wilt ophalen.</p>
+            <h4 style="margin-top: 50px;">QR code</h4>
+            <p>Download hier uw gepersonaliseerde QR code om uit te printen. Klaar voor gebruik door uw klanten.</p>
+            <a class="btn btn-primary" download href="/storage/qr/qrcode_{{$client->id}}.svg" title="ImageName">
+                Download QR code
+            </a>
+            <a href="/contacttracing/client/dashboard/QRQR">test</a>
             <br>
-            <form action="/contacttracing/client/dashboard/getdata" method="POST">
-                @csrf
-                Kies datum:
-                <input type="date" name="datum">
-                <br>
-                <br>
-                <input type="submit" value="Haal op" class="btn btn-primary">
-            </form>
+            <br>
+            <h4>Unieke link</h4>
+            <p>Hieronder is uw unieke link naar het formulier voor uw klanten, de QR code hierboven verwijst uw klanten door naar dezelfde link.</p>
+            <p><b>http://127.0.0.1:8000/contacttracing/{{$client->id}}</b></p>
         </div>
     </div>
 </div>
-
 </body>
 @endsection

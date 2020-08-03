@@ -36,7 +36,7 @@
                     print qr code
                   </a>
 
-                  {{-- <img style="float: right;" src="/storage/qr/qrcode_{{$client->id}}.svg" alt="klik generate"> --}}
+                  <img style="float: right;" src="/storage/qr/qrcode_{{$client->id}}.svg" alt="klik generate">
                   
                   <a href="/generateQRcode/{{$client->id}}" class="btn btn-primary">Genereer QR code</a>
                 </div>

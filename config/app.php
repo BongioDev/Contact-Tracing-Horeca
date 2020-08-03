@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'nl',
 
     /*
     |--------------------------------------------------------------------------
@@ -163,7 +163,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         LaravelQRCode\Providers\QRCodeServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
-        
+
 
         /*
          * Package Service Providers...

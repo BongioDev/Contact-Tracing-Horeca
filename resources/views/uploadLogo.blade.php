@@ -17,16 +17,17 @@
               </div>
         </div>
         <div class="col-md-9">
-            <h4 style="margin-top: 50px;">Klanten ophalen</h4>
-            <p>Kies hieronder onder welke datum u de klanten wilt ophalen.</p>
+            <h4 style="margin-top: 50px;">Logo uploaden of veranderen</h4>
+            <p>Upload of verander hier uw logo die uw klanten zien bij het invullen van het formulier.</p>
+            <p>Huidig logo: </p><img style="max-width: 200px" src="/storage/logos/{{$client->logo}}" alt="">
             <br>
-            <form action="/contacttracing/client/dashboard/getdata" method="POST">
+            <form action="/contacttracing/client/dashboard/logo" method="POST" enctype="multipart/form-data">
                 @csrf
-                Kies datum:
-                <input type="date" name="datum">
+                <input name="logo" type="file">
                 <br>
+                <small>(Max 2MB)</small>
                 <br>
-                <input type="submit" value="Haal op" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary">Upload logo</button>
             </form>
         </div>
     </div>

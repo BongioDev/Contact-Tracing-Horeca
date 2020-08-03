@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,3 +53,35 @@ Route::post('/contacttracing/client/dashboard/getdata', 'clientController@postDa
 Route::get('/contacttracing/client/dashboard/getdata/download/{datum}', 'clientController@downloadData')->middleware('auth');
 
 Route::get('/contacttracing/client/dashboard/help', 'clientController@help')->middleware('auth');
+
+Route::get('/contacttracing/client/dashboard/QR', function () {
+    $client = User::where('id', auth()->user()->id)->first();
+    return view('qrClient')->with('client', $client);
+});
+
+
+
+
+// https://packagist.org/packages/orbitale/imagemagick-php
+Route::get('/contacttracing/client/dashboard/QRQR', 'clientController@getQR')->middleware('auth');
+
+
+
+
+
+
+
+Route::get('/contacttracing/client/dashboard/QRdownload', 'clientController@getQR')->middleware('auth');
+
+Route::get('/contacttracing/client/dashboard/logo', function () {
+    $client = User::where('id', auth()->user()->id)->first();
+    return view('uploadLogo')->with('client', $client);
+});
+
+Route::post('/contacttracing/client/dashboard/logo', 'clientController@uploadLogo')->middleware('auth');
+
+Route::get('/contacttracing/client/dashboard/changepass', function () {
+    return view('auth.changepass');
+});
+
+Route::post('/changePassword','ClientController@changePassword')->name('changePassword')->middleware('auth');

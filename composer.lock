@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b77060dc2ecbf79fdef798344217127",
+    "content-hash": "48b682819bed8b1e18d2ac0e12dea9d5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1715,6 +1715,55 @@
                 "serialize"
             ],
             "time": "2020-06-17T14:59:55+00:00"
+        },
+        {
+            "name": "orbitale/imagemagick-php",
+            "version": "v3.0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Orbitale/ImageMagickPHP.git",
+                "reference": "ba726f939b1c612b2a54c95b10ad7508c75e85f0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Orbitale/ImageMagickPHP/zipball/ba726f939b1c612b2a54c95b10ad7508c75e85f0",
+                "reference": "ba726f939b1c612b2a54c95b10ad7508c75e85f0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2",
+                "symfony/process": "^4.0|^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Orbitale\\Component\\ImageMagick\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Rock Ancelet",
+                    "email": "alex@orbitale.io",
+                    "homepage": "http://www.orbitale.io/"
+                }
+            ],
+            "description": "A system that allows creating commands to send to the exec() function to use ImageMagick's powerful features.",
+            "homepage": "https://github.com/Orbitale/ImageMagickPHP",
+            "keywords": [
+                "ImageMagick",
+                "converter",
+                "gd",
+                "image",
+                "imagick"
+            ],
+            "time": "2020-07-31T07:29:36+00:00"
         },
         {
             "name": "paragonie/random_compat",

@@ -55,9 +55,10 @@
                 </div>
                 <div class="booking-form">
                     <h1 id="catering">{{$client->cateringName}}</h1>
+                    <div id="logo" style="background:url(/storage/logos/{{$client->logo}});"></div>
                     <form id="booking-form" method="post" action="">
                         @csrf
-                        <img id="logo" src="/storage/logos/{{$client->logo}}" alt="Booking Image">
+                        {{-- <img id="logo" src="/storage/logos/{{$client->logo}}" alt="Booking Image"> --}}
                         <h2>Vul hieronder uw gegevens in</h2>
                         <p>(1 persoon per tafel)</p>
                         <div class="form-group form-input">
