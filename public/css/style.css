@@ -230,15 +230,11 @@ body {
 }
 
 #logo {
-  background-color: black; 
-  height: 150px; 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; 
-  /* max-width: 120px;
-  display:block;
-  margin:auto;
-  border-radius: 5px; */
+max-width: 180px;
+display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 7px;
 }
 
   .legal {

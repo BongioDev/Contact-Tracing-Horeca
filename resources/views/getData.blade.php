@@ -18,7 +18,7 @@
         </div>
         <div class="col-md-9">
             <h4 style="margin-top: 50px;">Klanten ophalen</h4>
-            <p>Kies hieronder onder welke datum u de klanten wilt ophalen.</p>
+            <p>Kies een datum om een klantenlijst op te halen.</p>
             <br>
             <form action="/contacttracing/client/dashboard/getdata" method="POST">
                 @csrf

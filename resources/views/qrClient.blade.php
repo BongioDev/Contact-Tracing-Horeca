@@ -22,7 +22,6 @@
             <a class="btn btn-primary" download href="/storage/qr/qrcode_{{$client->id}}.svg" title="ImageName">
                 Download QR code
             </a>
-            <a href="/contacttracing/client/dashboard/QRQR">test</a>
             <br>
             <br>
             <h4>Unieke link</h4>

@@ -37,16 +37,16 @@
 						<p>De Nationale Veiligheidsraad heeft op 23 juli 2020 beslist dat horecazaken de aanwezigheid van
 							hun gasten moeten noteren. Dit komt er niet zomaar: de COVID-19 pandemie woedt opnieuw in
 							volle hevigheid, en dit is slechts één van de maatregelen genomen om jou, je familie, vrienden en
-							de andere klanten beter te kunnen beschermen. Wil je een snelle en handige app voor uw klanten en voor uzelf? kies hieronder dan een voor jouw best passende formule.</p>
+							de andere klanten beter te kunnen beschermen. Wil je een snelle en handige app voor uw klanten en voor uzelf? Kies hieronder dan een voor jouw passende formule.</p>
 					</section>
 					<section>
 						<ul class="checklist">
 							<li>Handige en veilige app voor u en uw klanten.</li>
 							<li>QR code om uw klanten snel te verwijzen naar het formulier.</li>
 							<li>Dankzij de QR code kan het invullen van het formulier aan eigen tafel gebeuren.</li>
-							<li>Geen centraal toestel, het invullen gebeurd op het toestel van de klant.</li>
-							<li>Veilige login systeem voor gegevens te raadplegen wanneer nodig.</li>
-							<li>Volledig conform met de GDPR wetgeving.</li>
+							<li>Geen centraal toestel, het invullen gebeurt op het toestel van de klant.</li>
+							<li>Veilig login systeem om gegevens te raadplegen wanneer nodig.</li>
+							<li>Volledig conform de GDPR wetgeving.</li>
 						</ul>
 					</section>
 				</div>
@@ -61,9 +61,9 @@
 						</div>
 						<div class="content">
 							<h3>Eén maand</h3>
-							<p>Je betaald <b>25€</b> om voor één maand gebruik te maken van onze contact tracing app, je kan altijd verlengen.
-							   Geïnteresseerd? Klik op de knop hieronder en je word naar de contact pagina gebracht met verdere instructies,
-							   binnen 24 uur is uw account klaar voor gebruik met een gepersonaliseerde QR code voor uw klanten.
+							<p>Je betaalt <b>€25</b> om één maand gebruik te maken van onze contact tracing app, je kan altijd verlengen.
+							   Geïnteresseerd? Klik op de knop hieronder en je wordt naar de contact pagina gebracht met verdere instructies,
+							   binnen 24 uur is je account klaar voor gebruik met een gepersonaliseerde QR code voor uw klanten.
 							</p>
 							<ul class="actions">
 								<li><a href="#" class="button alt">Geïnteresseerd</a></li>
@@ -76,9 +76,9 @@
 						</div>
 						<div class="content">
 							<h3>3 maanden</h3>
-							<p>Je betaald <b>70€</b> om voor drie maanden gebruik te maken van onze contact tracing app, je kan altijd verlengen.
-								Geïnteresseerd? Klik op de knop hieronder en je word naar de contact pagina gebracht met verdere instructies,
-							   binnen 24 uur is uw account klaar voor gebruik met een gepersonaliseerde QR code voor uw klanten.
+							<p>Je betaalt <b>€70</b> om drie maanden gebruik te maken van onze contact tracing app, je kan altijd verlengen.
+								Geïnteresseerd? Klik op de knop hieronder en je wordt naar de contact pagina gebracht met verdere instructies,
+							   binnen 24 uur is je account klaar voor gebruik met een gepersonaliseerde QR code voor uw klanten.
 							</p>
 							<ul class="actions">
 								<li><a href="#" class="button alt">Geïnteresseerd</a></li>
@@ -91,9 +91,9 @@
 						</div>
 						<div class="content">
 							<h3>6 maanden</h3>
-							<p>Je betaald <b>120€</b> om voor zes maanden gebruik te maken van onze contact tracing app, je kan altijd verlengen.
-								Geïnteresseerd? Klik op de knop hieronder en je word naar de contact pagina gebracht met verdere instructies,
-							   binnen 24 uur is uw account klaar voor gebruik met een gepersonaliseerde QR code voor uw klanten.
+							<p>Je betaalt <b>€120</b> om zes maanden gebruik te maken van onze contact tracing app, je kan altijd verlengen.
+								Geïnteresseerd? Klik op de knop hieronder en je wordt naar de contact pagina gebracht met verdere instructies,
+							   binnen 24 uur is je account klaar voor gebruik met een gepersonaliseerde QR code voor uw klanten.
 							</p>
 							<ul class="actions">
 								<li><a href="#" class="button alt">Geïnteresseerd</a></li>

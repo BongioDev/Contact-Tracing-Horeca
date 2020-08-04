@@ -55,10 +55,10 @@
                 </div>
                 <div class="booking-form">
                     <h1 id="catering">{{$client->cateringName}}</h1>
-                    <div id="logo" style="background:url(/storage/logos/{{$client->logo}});"></div>
-                    <form id="booking-form" method="post" action="">
+                    <form style="padding-top: 0" id="booking-form" method="post" action="">
                         @csrf
-                        {{-- <img id="logo" src="/storage/logos/{{$client->logo}}" alt="Booking Image"> --}}
+                        <img id="logo" src="/storage/logos/{{$client->logo}}" alt="Booking Image">
+                        <br>
                         <h2>Vul hieronder uw gegevens in</h2>
                         <p>(1 persoon per tafel)</p>
                         <div class="form-group form-input">
@@ -68,16 +68,16 @@
                             <input placeholder="Voornaam*" type="text" name="firstName" value="" required/>
                         </div>
                         <div class="form-group form-input">
-                            <input placeholder="Telefoon nummer*" type="number" name="telnr" value="" required />
+                            <input placeholder="Telefoonnummer*" type="number" name="telnr" value="" required />
                         </div>
                         <div class="form-group form-input">
-                            <input placeholder="E-mail adres*" type="email" name="email" value="" required />
+                            <input placeholder="E-mailadres*" type="email" name="email" value="" required />
                         </div>
                         <div class="form-group form-input">
-                            <input placeholder="Tafel nummer*" type="number" name="tableNr" value="" required />
+                            <input placeholder="Tafelnummer*" type="number" name="tableNr" value="" required />
                         </div>
                         <div class="form-group form-input">
-                            <input placeholder="Verblijf periode (aantal dagen)" type="number" name="stay" value="" />
+                            <input placeholder="Verblijfsperiode (aantal dagen)" type="number" name="stay" value="" />
                             <small>(Indien van toepassing)</small>
                         </div>
                         <br>
@@ -86,7 +86,7 @@
                             <h4 class="legal">Met het invullen van dit formulier ga ik akkoord met de gegevensverwerking
                                 onder artikel 6, c van de GDPR) en het relevante Ministerieel Besluit.</h4>
                             <p class="legal">Het is belangrijk dat je dit formulier correct invult, je helpt immers mee aan een coronavrije samenleving.
-                                Je telefoonnummer of je e-mailadres is verplicht.</p>
+                                Je telefoonnummer en e-mailadres zijn verplicht.</p>
                         </div>
                     </form>
                 </div>
@@ -95,8 +95,7 @@
 
     </div>
 
-    <!-- JS -->
     <script src="{{ asset('vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{ asset('js/mainForm.js')}}"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+    <script src="{{ asset('js/main.js')}}"></script>
+</body>
 </html>
