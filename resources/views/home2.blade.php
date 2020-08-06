@@ -10,11 +10,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
 	<body>
-		@if (session('success'))
-		<div style="background:#542e5c; padding: 50px" class="alert alert-success">
-			<h2 style="text-align: center; color:white;">{{session('success')}}</h2 style="text-align: center">
-		</div>
-		@endif
+
 		<!-- Banner -->
 			<section id="banner">
 				<div class="inner split">
@@ -41,11 +37,11 @@
 						<p>De Nationale Veiligheidsraad heeft op 23 juli 2020 beslist dat horecazaken de aanwezigheid van
 							hun gasten moeten noteren. Dit komt er niet zomaar: de COVID-19 pandemie woedt opnieuw in
 							volle hevigheid, en dit is slechts één van de maatregelen genomen om jou, je familie, vrienden en
-							de andere klanten beter te kunnen beschermen. Wil je een snelle en handige app voor uw klanten en voor uzelf? Meld je dan aan via onderstaande formulier en je inlog gegevens staan klaar binnen 24u!</p>
+							de andere klanten beter te kunnen beschermen. Wil je een snelle en handige app voor uw klanten en voor uzelf? Kies hieronder dan een voor jouw passende formule.</p>
 					</section>
 					<section>
 						<ul class="checklist">
-							<li>Volledig gratis.</li>
+							<li>Handige en veilige app voor u en uw klanten.</li>
 							<li>QR code om uw klanten snel te verwijzen naar het formulier.</li>
 							<li>Dankzij de QR code kan het invullen van het formulier aan eigen tafel gebeuren.</li>
 							<li>Geen centraal toestel, het invullen gebeurt op het toestel van de klant.</li>
@@ -61,73 +57,68 @@
 				<div class="inner">
 					<div class="spotlight">
 						<div class="image">
-							<img style="height: 500px; object-fit: cover;" src="images/yes.jpg" alt="" />
+							<img style="height: 500px; object-fit: cover;" src="images/pic01.jpg" alt="" />
 						</div>
 						<div class="content">
-							<h3>Ja, ik wil gratis gebruik maken van deze applicatie!</h3>
-							<p>Vul je gegevens hieronder in en verwacht binnen de 24u jouw inlog gegevens.</p>
-							<form action="/register" class="alt" method="POST">
-								@csrf							<div class="row uniform">
-									<div class="6u 12u$(xsmall)">
-										<input required name="name" placeholder="Naam" type="text">
-									</div>
-									<div class="6u$ 12u$(xsmall)">
-										<input required name="firstName" placeholder="Voornaam" type="text">
-									</div>
-									<div class="12u$">
-										<input required name="cateringName" placeholder="Naam horeca zaak" type="text">
-									</div>
-									<div class="6u 12u$(xsmall)">
-										<input required name="streetAndNr" placeholder="Straat + nr." type="text">
-									</div>
-									<div class="6u$ 12u$(xsmall)">
-										<input required name="city" placeholder="Stad of gemeente" type="text">
-									</div>
-									<div class="6u$ 12u$(xsmall)">
-										<input required name="tel" placeholder="Telefoon nr." type="text">
-									</div>
-									<div class="12u$">
-										<input required name="email" placeholder="E-mail adres" type="email">
-									</div>
-								 </div>
-								 <ul class="actions">
-									 <li><input class="alt" value="Verstuur!" type="submit"></li>
-								 </ul>
-							 </form>
+							<h3>Eén maand</h3>
+							<p>Je betaalt <b>€25</b> om één maand gebruik te maken van onze contact tracing app, je kan altijd verlengen.
+							   Geïnteresseerd? Klik op de knop hieronder en je wordt naar de contact pagina gebracht met verdere instructies,
+							   binnen 24 uur is je account klaar voor gebruik met een gepersonaliseerde QR code voor uw klanten.
+							</p>
+							<ul class="actions">
+								<li><a href="#" class="button alt">Geïnteresseerd</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="spotlight">
+						<div class="image">
+							<img style="height: 500px; object-fit: cover;" src="images/pic02.jpg" alt="" />
+						</div>
+						<div class="content">
+							<h3>3 maanden</h3>
+							<p>Je betaalt <b>€70</b> om drie maanden gebruik te maken van onze contact tracing app, je kan altijd verlengen.
+								Geïnteresseerd? Klik op de knop hieronder en je wordt naar de contact pagina gebracht met verdere instructies,
+							   binnen 24 uur is je account klaar voor gebruik met een gepersonaliseerde QR code voor uw klanten.
+							</p>
+							<ul class="actions">
+								<li><a href="#" class="button alt">Geïnteresseerd</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="spotlight">
+						<div class="image">
+							<img style="height: 500px; object-fit: cover;" src="images/pic03.jpg" alt="" />
+						</div>
+						<div class="content">
+							<h3>6 maanden</h3>
+							<p>Je betaalt <b>€120</b> om zes maanden gebruik te maken van onze contact tracing app, je kan altijd verlengen.
+								Geïnteresseerd? Klik op de knop hieronder en je wordt naar de contact pagina gebracht met verdere instructies,
+							   binnen 24 uur is je account klaar voor gebruik met een gepersonaliseerde QR code voor uw klanten.
+							</p>
+							<ul class="actions">
+								<li><a href="#" class="button alt">Geïnteresseerd</a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section id="three" class="wrapper">
-				<div class="inner split">
-					<section>
-						<h2>Waarom is deze app gratis?</h2>
-						<p>We leven anno 2020 in bewogen tijden. Nu meer als ooit primeert veiligheid in het dagdagelijkse leven. 
-							Net daarom kozen we ervoor om deze app gratis te maken, want op veiligheid staat geen prijs. 
-							We hopen met dit initiatief het effect te creeëren dat deze app massaal gebruikt wordt en we op die manier samenwerken aan een veiligere situatie. 
-						</p>
-						<p>Stay safe!</p>
-						<a style="text-decoration:none" target="_blank" href="https://bongiodev.be/">Bongio Dev</a>
-					</section>
-				</div>
-			</section>
 		<!-- Contact -->
 			<section id="contact" class="wrapper">
 				<div class="inner split">
 					<section>
 						<h2>Heb je nog vragen?</h2>
 						<p>Aarzel niet om ons te contacteren met al je vragen of opmerkingen en we helpen je zo snel mogelijk verder.</p>
-						<form action="/contactMail" class="alt" method="POST">
-							@csrf							<div class="row uniform">
+						<form action="#" class="alt" method="POST">
+							<div class="row uniform">
 								<div class="6u 12u$(xsmall)">
-									<input required name="name" placeholder="Naam" type="text">
+									<input name="name" placeholder="Naam" type="text">
 								</div>
 								<div class="6u$ 12u$(xsmall)">
-									<input required name="email" placeholder="E-mail" type="email">
+									<input name="email" placeholder="E-mail" type="email">
 								</div>
 								<div class="12u$">
-									<textarea required name="message" placeholder="Bericht" rows="4"></textarea>
+									<textarea name="message" placeholder="Bericht" rows="4"></textarea>
  								</div>
  							</div>
  							<ul class="actions">
@@ -137,9 +128,11 @@
 					</section>
 					<section>
 						<ul class="contact">
-							<li class="fab fa-linkedin"><a target="_blank" href="https://www.linkedin.com/in/aleko-bongiovanni-983645196/">Aleko Bongiovanni</a></li>
-							<li class="fas fa-phone"><a href="+32488303222">+32488303222</a></li>
-							<li class="fas fa-mouse-pointer"><a target="_blank" href="https://www.bongiodev.be/">Website</a></li>
+							<li class="fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
+							<li class="fa-facebook"><a href="#">facebook.com/untitled-tld</a></li>
+							<li class="fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+							<li class="fa-envelope"><a href="#">information@untitled.tld</a></li>
+							<li class="fa-home">1234 Somewhere Road Suite 9823<br/>Nashville, TN 00000-0000</li>
 						</ul>
 					</section>
 				</div>
@@ -148,7 +141,7 @@
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="copyright">
-					Made with &#10084; by <a target="_blank" href="https://bongiodev.be">Bongio Dev</a>.
+					&copy; Untitled. All rights reserved.. Design: <a target="_blank" href="https://bongiodev.be">Bongio Dev</a>.
 				</div>
 			</footer>
 

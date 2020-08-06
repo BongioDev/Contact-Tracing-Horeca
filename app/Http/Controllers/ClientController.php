@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Orbitale\Component\ImageMagick\Command;
 use App\Exceptions\Handler;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
+use App\Mail\RegisterMail;
 
 class ClientController extends Controller
 {
@@ -193,4 +196,31 @@ class ClientController extends Controller
 
     }
 
+    // register and contact
+
+    public function contactMail(Request $request)
+    {
+       $name = $request->input('name');
+       $email = $request->input('email');
+       $message=  $request->input('message');
+
+       Mail::to('aleko.bongiovanni@hotmail.com')->send(new ContactMail($name, $email, $message));
+
+       return redirect('/')->with('success', 'Uw bericht is verstuurd!');
+    }
+
+    public function register(Request $request)
+    {
+       $name = $request->input('name');
+       $firstName = $request->input('firstName');
+       $cateringName = $request->input('cateringName');
+       $adres = $request->input('streetAndNr');
+       $city = $request->input('city');
+       $email = $request->input('email');
+       $tel = $request->input('tel');
+
+       Mail::to('aleko.bongiovanni@hotmail.com')->send(new RegisterMail($name, $email, $firstName, $cateringName, $adres, $city, $tel));
+
+       return redirect('/')->with('success', 'Uw aanvraag is goed bij ons binnen gekomen! U kan binnen 24u een mail verwachten met uw inlog gegevens.');
+    }
 }

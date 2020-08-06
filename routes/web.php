@@ -59,17 +59,7 @@ Route::get('/contacttracing/client/dashboard/QR', function () {
     return view('qrClient')->with('client', $client);
 });
 
-
-
-
-// https://packagist.org/packages/orbitale/imagemagick-php
 Route::get('/contacttracing/client/dashboard/QRQR', 'clientController@getQR')->middleware('auth');
-
-
-
-
-
-
 
 Route::get('/contacttracing/client/dashboard/QRdownload', 'clientController@getQR')->middleware('auth');
 
@@ -85,3 +75,7 @@ Route::get('/contacttracing/client/dashboard/changepass', function () {
 });
 
 Route::post('/changePassword','ClientController@changePassword')->name('changePassword')->middleware('auth');
+
+Route::post('/contactMail','ClientController@contactMail');
+
+Route::post('/register','ClientController@register');
