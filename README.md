@@ -5,6 +5,12 @@ Admin account: /cthorecaadmin | Login: aleko.bongiovanni@hotmail.com Pass:
 Client account: /contacttracing/client/dashboard | Login: test@zaak.com Pass: testtest
 
 
+<br>
+<br>
+
+<br>
+<br>
+<br>
 
 
 
